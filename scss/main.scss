@@ -14,3 +14,32 @@ footer.footer {
   bottom: 0;
   width: 100%;
 }
+p {
+  font-family: $font-familly-serif;
+  font-size: 18px;
+}
+.Photo1 {
+  position: relative;
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("../Images/Photo1.jpg");
+    background-size: cover;
+    filter: brightness(0.3);
+  }
+  * {
+    //Positionner les éléments devant le ::before
+    position: relative;
+  }
+  .Photo1-content {
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+}
